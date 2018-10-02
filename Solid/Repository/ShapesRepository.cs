@@ -1,9 +1,5 @@
-﻿using Solid.Data;
-using System;
+﻿using Solid.Foundation.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Solid.Repository
 {

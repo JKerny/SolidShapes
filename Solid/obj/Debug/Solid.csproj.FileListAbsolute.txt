@@ -1,6 +1,0 @@
-c:\users\jeremyk\documents\visual studio 2015\Projects\Solid\Solid\bin\Debug\Solid.exe.config
-c:\users\jeremyk\documents\visual studio 2015\Projects\Solid\Solid\bin\Debug\Solid.exe
-c:\users\jeremyk\documents\visual studio 2015\Projects\Solid\Solid\bin\Debug\Solid.pdb
-c:\users\jeremyk\documents\visual studio 2015\Projects\Solid\Solid\obj\Debug\Solid.csprojResolveAssemblyReference.cache
-c:\users\jeremyk\documents\visual studio 2015\Projects\Solid\Solid\obj\Debug\Solid.exe
-c:\users\jeremyk\documents\visual studio 2015\Projects\Solid\Solid\obj\Debug\Solid.pdb

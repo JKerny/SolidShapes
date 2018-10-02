@@ -3,3 +3,9 @@ c:\Users\JeremyK\documents\visual studio 2015\Projects\Solid\Solid.Foundation.Mo
 c:\Users\JeremyK\documents\visual studio 2015\Projects\Solid\Solid.Foundation.Models\obj\Debug\Solid.Foundation.Models.csprojResolveAssemblyReference.cache
 c:\Users\JeremyK\documents\visual studio 2015\Projects\Solid\Solid.Foundation.Models\obj\Debug\Solid.Foundation.Models.dll
 c:\Users\JeremyK\documents\visual studio 2015\Projects\Solid\Solid.Foundation.Models\obj\Debug\Solid.Foundation.Models.pdb
+C:\Play\Shapes\Solid.Foundation.Models\bin\Debug\Solid.Foundation.Models.dll
+C:\Play\Shapes\Solid.Foundation.Models\bin\Debug\Solid.Foundation.Models.pdb
+C:\Play\Shapes\Solid.Foundation.Models\obj\Debug\Solid.Foundation.Models.csprojAssemblyReference.cache
+C:\Play\Shapes\Solid.Foundation.Models\obj\Debug\Solid.Foundation.Models.csproj.CoreCompileInputs.cache
+C:\Play\Shapes\Solid.Foundation.Models\obj\Debug\Solid.Foundation.Models.dll
+C:\Play\Shapes\Solid.Foundation.Models\obj\Debug\Solid.Foundation.Models.pdb

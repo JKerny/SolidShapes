@@ -52,6 +52,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Solid.Foundation.DependencyInjection\Solid.Foundation.DependencyInjection.csproj">
+      <Project>{AAE679AD-EAF6-4C70-B3AD-559367ED5CF4}</Project>
+      <Name>Solid.Foundation.DependencyInjection</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Solid.Foundation.Models\Solid.Foundation.Models.csproj">
       <Project>{F24C1AFD-AB91-4ED6-B4CB-FA931023AA51}</Project>
       <Name>Solid.Foundation.Models</Name>

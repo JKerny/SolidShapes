@@ -1,1 +1,0 @@
-c:\Users\JeremyK\documents\visual studio 2015\Projects\Solid\Solid.Foundation.DependencyInjection\obj\Debug\Solid.Foundation.DependencyInjection.csprojResolveAssemblyReference.cache
