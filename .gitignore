@@ -5,3 +5,6 @@
 /.vs/Solid/v15
 *.dll
 /Solid.Foundation.DependencyInjection/bin/Debug
+/Solid/bin/Debug
+/Solid/obj/Debug
+/Solid.Foundation.DependencyInjection/obj/Debug
