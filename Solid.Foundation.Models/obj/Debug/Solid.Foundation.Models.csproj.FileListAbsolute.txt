@@ -1,0 +1,5 @@
+c:\Users\JeremyK\documents\visual studio 2015\Projects\Solid\Solid.Foundation.Models\bin\Debug\Solid.Foundation.Models.dll
+c:\Users\JeremyK\documents\visual studio 2015\Projects\Solid\Solid.Foundation.Models\bin\Debug\Solid.Foundation.Models.pdb
+c:\Users\JeremyK\documents\visual studio 2015\Projects\Solid\Solid.Foundation.Models\obj\Debug\Solid.Foundation.Models.csprojResolveAssemblyReference.cache
+c:\Users\JeremyK\documents\visual studio 2015\Projects\Solid\Solid.Foundation.Models\obj\Debug\Solid.Foundation.Models.dll
+c:\Users\JeremyK\documents\visual studio 2015\Projects\Solid\Solid.Foundation.Models\obj\Debug\Solid.Foundation.Models.pdb
