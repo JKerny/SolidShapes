@@ -8,3 +8,5 @@
 /Solid/bin/Debug
 /Solid/obj/Debug
 /Solid.Foundation.DependencyInjection/obj/Debug
+/Solid.Foundation.Repository/obj/Debug
+/Solid.Foundation.Repository/bin/Debug

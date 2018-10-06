@@ -43,6 +43,7 @@
     <Compile Include="Data\ShapeList.cs" />
     <Compile Include="IShapeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShapeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Solid.Foundation.Models\Solid.Foundation.Models.csproj">

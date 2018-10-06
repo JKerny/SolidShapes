@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Solid.Foundation.Models
 {
     public interface IShape
-    {
+    {        
         double Area();
     }
 }

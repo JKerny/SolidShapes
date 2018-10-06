@@ -3,32 +3,35 @@ using Solid.Foundation.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 
 namespace Solid.Foundation.DependencyInjection
 {
-    public class IocContainer
+    public static class IocContainer
     {
-        public void Configure()
+        public static void Configure()
         {
             var builder = new ContainerBuilder();
-
-            var servicesAssembly = typeof(IShape).Assembly;
-            var servicesTypes = servicesAssembly
-                .GetTypes()
-                .Where(t => !t.IsInterface && !t.IsAbstract &&
-                    (t.Name.EndsWith("Service") || t.Name.EndsWith("Repository")) &&
-                    t.GetInterface("I" + t.Name, false) != null)
-                .ToArray();
-            builder.RegisterTypes(servicesTypes).AsImplementedInterfaces();
-
-
-            var container = builder.Build();
-            foreach (var type in servicesTypes)
+            List<Type> serviceTypes = new List<Type>();
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies().Where(x => x.FullName.Contains("Solid."));
+            foreach (var assembly in assemblies)
             {
-                container.Resolve(type);
+                builder.RegisterAssemblyTypes(assembly)
+                .Where(t => t.Name.EndsWith("Repository"))
+                .AsImplementedInterfaces()
+ .              InstancePerRequest();
+
+            }
+            if (serviceTypes != null)
+            {                
+                var container = builder.Build();
+                foreach (var type in serviceTypes)
+                {
+                    container.Resolve(type);
+                }
             }
         }
     }

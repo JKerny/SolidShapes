@@ -43,8 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\ShapeList.cs" />
-    <Compile Include="Repository\ShapesRepository.cs" />
+    <Compile Include="ExecuteProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,6 +58,10 @@
     <ProjectReference Include="..\Solid.Foundation.Models\Solid.Foundation.Models.csproj">
       <Project>{F24C1AFD-AB91-4ED6-B4CB-FA931023AA51}</Project>
       <Name>Solid.Foundation.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Solid.Foundation.Repository\Solid.Foundation.Repository.csproj">
+      <Project>{18d9ec43-4c94-4f73-98a4-5b069d6483fd}</Project>
+      <Name>Solid.Foundation.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
