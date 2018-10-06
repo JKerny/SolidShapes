@@ -9,16 +9,15 @@ namespace Solid.Foundation.Models.Tests
 {
     public class AreaCalculationTests
     {
-        [Fact]
-        public void RectangleAreaCalculationTest()
+        [Theory]
+        [InlineData(2,4,8)]
+        [InlineData(3,5,15)]
+        public void RectangleAreaCalculationTest(int width, int length, int expected)
         {
-            //arrange
-            var expected = 8;
-
             //act
             var rectangle = new Rectangle();
-            rectangle.Length = 4;
-            rectangle.Width = 2;
+            rectangle.Length = length;
+            rectangle.Width = width;
             var actual = rectangle.Area();
 
             //assert
