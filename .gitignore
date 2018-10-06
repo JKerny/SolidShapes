@@ -12,3 +12,6 @@
 /Solid.Foundation.Repository/bin/Debug
 /Solid.Foundation.Models/bin/Debug
 /Solid.Foundation.Models/obj/Debug
+*.pdb
+/Solid.Foundation.Models.Tests/bin/Debug
+/Solid.Foundation.Models.Tests/obj/Debug
