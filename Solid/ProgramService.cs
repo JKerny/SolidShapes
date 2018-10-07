@@ -6,6 +6,11 @@ namespace Solid
     public class ProgramService
     {
         private readonly IShapeRepository _shapeRepository;
+        public ProgramService()
+        {
+            _shapeRepository = new ShapeRepository();
+        }
+
         public ProgramService(IShapeRepository shapeRepository)
         {
             _shapeRepository = shapeRepository;

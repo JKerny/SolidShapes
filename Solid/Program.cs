@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 namespace Solid
 {
     class Program
-    {        
+    {       
         static void Main(string[] args)
-        {
+        {            
             IocContainer.Configure();
-            var programRunner = new ProgramService(new ShapeRepository());
+            var programRunner = new ProgramService();
             programRunner.Execute();
         }
     }
