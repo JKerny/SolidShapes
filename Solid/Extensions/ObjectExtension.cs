@@ -9,7 +9,7 @@ namespace Solid.Extensions
 {
     static class ObjectExtension
     {
-        public static object GetPropValue(this object src, string propName, double value)
+        public static object SetPropValue(this object src, string propName, double value)
         {
             var propertyInfo = src.GetType().GetProperty(propName);
             propertyInfo.SetValue(src, Convert.ChangeType(value, propertyInfo.PropertyType), null);
