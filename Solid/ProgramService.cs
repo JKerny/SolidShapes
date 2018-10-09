@@ -4,6 +4,7 @@ using Solid.Foundation.Models;
 using System.Linq;
 using System.Collections.Generic;
 using System.Reflection;
+using Solid.Extensions;
 
 namespace Solid
 {
@@ -24,13 +25,21 @@ namespace Solid
         {
             Console.WriteLine(Constants.EnterShapeName);            
             var shape = DetermineShape(Console.ReadLine());
+            List<double> number = new List<double>();
             if(shape != null)
             {                
                 foreach(var property in GetProperties(shape))
                 {
-                    Console.WriteLine("Please enter a " + property);
-                    Console.ReadLine();
+                    Console.WriteLine("Please the measure of the " + property);
+                    double length = double.Parse(Console.ReadLine()); 
+                    var shapeProperty = shape.GetPropValue(property,length);
                 }
+                string shapeClassName = shape.GetType().ToString();
+                int lastChars = shapeClassName.LastIndexOf('.') + 1;
+                string shapeName = shapeClassName.Substring(lastChars, shapeClassName.Length - lastChars);
+                var response = string.Format("The area of the {0} is {1}",shapeName , shape.Area());
+                Console.WriteLine(response);
+                Console.ReadLine();
             }
         }
 
