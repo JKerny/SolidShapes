@@ -12,20 +12,22 @@ namespace Solid
     {
         public void Execute()
         {
-            Console.WriteLine(Constants.EnterShapeName);            
-            var shape = DetermineShape(Console.ReadLine());
-            List<double> number = new List<double>();
-            if(shape != null)
+            while (true)
             {
-                foreach (var property in GetProperties(shape))
+                Console.WriteLine(Constants.EnterShapeName);
+                var shape = DetermineShape(Console.ReadLine());
+                List<double> number = new List<double>();
+                if (shape != null)
                 {
-                    Console.WriteLine("Please enter the measure of the " + property);
-                    double length = double.Parse(Console.ReadLine());
-                    shape.SetPropValue(property, length);
+                    foreach (var property in GetProperties(shape))
+                    {
+                        Console.WriteLine("Please enter the measure of the " + property);
+                        double length = double.Parse(Console.ReadLine());
+                        shape.SetPropValue(property, length);
+                    }
+                    string response = ShapeAreaResponse(shape);
+                    Console.WriteLine(response);
                 }
-                string response = ShapeAreaResponse(shape);
-                Console.WriteLine(response);
-                Console.ReadLine();
             }
         }
 
@@ -51,17 +53,23 @@ namespace Solid
         }
 
         private IShape DetermineShape(string input)
-        {            
-            var shapeAssembly = typeof(IShape).Assembly;
-            var shapeType = shapeAssembly.GetTypes().Where(t => t.GetInterface("IShape") == typeof(IShape));
-            var type = shapeType.Where(x => x.Name.ToLower()[0] == input.ToLower()[0]).FirstOrDefault();
+        {
+            Assembly shapeAssembly = typeof(IShape).Assembly;
+            var type = GetType(input, shapeAssembly);
+            
+            if (type == null)
+            {
+                return null;
+            }
+
             var shape = Activator.CreateInstance(shapeAssembly.FullName, type.FullName);
             return (IShape)shape.Unwrap();
         }
 
-        public static T Cast<T>(object o)
-        {
-            return (T)o;
+        private Type GetType(string input,Assembly assembly)
+        {            
+            var shapeType = assembly.GetTypes().Where(t => t.GetInterface("IShape") == typeof(IShape));
+            return shapeType.Where(x => x.Name.ToLower()[0] == input.ToLower()[0]).FirstOrDefault();
         }
     }
 }
