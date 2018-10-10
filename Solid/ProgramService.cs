@@ -15,15 +15,23 @@ namespace Solid
             while (true)
             {
                 Console.WriteLine(Constants.EnterShapeName);
-                var shape = DetermineShape(Console.ReadLine());
+                var shape = DetermineShape(Console.ReadLine());                
                 List<double> number = new List<double>();
                 if (shape != null)
                 {
-                    foreach (var property in GetProperties(shape))
+                    var properties = GetProperties(shape);
+                    for(int i = 0; i < properties.Count();i++)
                     {
-                        Console.WriteLine("Please enter the measure of the " + property);
-                        double length = double.Parse(Console.ReadLine());
-                        shape.SetPropValue(property, length);
+                        Console.WriteLine("Please enter the measure of the " + properties[i]);
+                        double measure = 0;
+                        bool isValidDouble = double.TryParse(Console.ReadLine(),out measure);
+                        if(!isValidDouble)
+                        {
+                            Console.WriteLine("Please enter a number");
+                            i = -1;
+                            continue;
+                        }
+                        shape.SetPropValue(properties[i], measure);
                     }
                     string response = ShapeAreaResponse(shape);
                     Console.WriteLine(response);
@@ -43,8 +51,8 @@ namespace Solid
         private List<string> GetProperties(object shape)
         {
             List<string> properties = new List<string>();
-            Type t = shape.GetType();
-            PropertyInfo[] props = t.GetProperties();            
+            Type type = shape.GetType();
+            PropertyInfo[] props = type.GetProperties();            
             foreach (PropertyInfo property in props)
             {
                 properties.Add(property.Name);
@@ -59,6 +67,7 @@ namespace Solid
             
             if (type == null)
             {
+                Console.WriteLine(input + " is not a valid shape");
                 return null;
             }
 
