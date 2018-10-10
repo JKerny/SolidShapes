@@ -28,7 +28,7 @@ namespace Solid
                         if(!isValidDouble)
                         {
                             Console.WriteLine("Please enter a number");
-                            i = -1;
+                            i --;
                             continue;
                         }
                         shape.SetPropValue(properties[i], measure);
